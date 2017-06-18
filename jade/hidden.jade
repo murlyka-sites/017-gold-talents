@@ -1,0 +1,22 @@
+.hidden
+	.popup#addreviews
+		h3.popup__title
+			| Оставить отзыв
+		form(method="POST")
+			input.popup__input(name="name", type="text", placeholder="Ваше Имя", required)
+			textarea.popup__textarea(name="reviews", placeholder="Ваш отзыв", required)
+			button.btn.btn_theme_gold.popup__btn(type="submit")
+				.btn__text_theme_gold
+					| Отправить
+	.popup#call
+		h3.popup__title
+			| Обратный звонок
+		form(method="POST")
+			input.popup__input(name="name", type="text", placeholder="Имя", required)
+			input.popup__input.input--phone(name="phone", type="text", placeholder="Телефон", required)
+			button.btn.btn_theme_gold.popup__btn(type="submit")
+				.btn__text_theme_gold
+					| Отправить
+	.gradient.popup#success
+		h3.popup__title.popup__title--success
+			| Форма успешно отправлена!

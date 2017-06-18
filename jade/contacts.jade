@@ -1,0 +1,40 @@
+.contacts-page
+	.container
+		.row
+			.col-xs-12
+				h2.text__h2.contacts-page__title
+					| Контакты
+				.contacts-page__text
+					p
+						| Телефоны для связи с организаторами:
+						br
+						b
+							| +7(495)-120-08-82
+						br
+						b
+							| +7(495)-120-08-86
+					p
+						| Электронная почта: 
+						b
+							| goldentalents.info@gmail.com
+					p
+						| Адрес: 
+						b
+							| Пятницкое шоссе, д. 9
+.maps#map
+script(type="text/javascript", src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU")
+script
+	| ymaps.ready(function () {
+	| var myMap = new ymaps.Map('map', {
+	|   center: [55.839421068893515,37.38534900000002],
+	|   zoom: 16
+	| }, {
+	|   searchControlProvider: 'yandex#search'
+	| }),
+	| myPlacemark = new ymaps.Placemark(
+	| myMap.getCenter(), {
+	|   balloonContent: 'Пятницкое шоссе, д. 9'
+	| });
+	| myMap.geoObjects.add(myPlacemark);
+	| myMap.controls.add('zoomControl');
+	| });
